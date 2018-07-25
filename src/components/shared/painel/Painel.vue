@@ -1,16 +1,21 @@
-<!-- picart/src/components/shared/painel/Painel.vue -->
-
 <template>
     <div class="painel">
-      <h2 class="painel-titulo">{{ titulo }}</h2>
-      <slot class="painel-conteudo">
-      </slot>
+      <h2 class="painel-titulo" @dblclick="visivel=!visivel">{{ titulo }}</h2>
+      <div class="painel-conteudo" v-show="visivel">
+        <slot></slot>
+      </div>
     </div>
 </template>
 
 <script>
 export default {
-  props: ["titulo"]
+  props: ["titulo"],
+
+  data(){
+    return{
+      visivel:true
+    }
+  }
 };
 </script>
 <style scoped>
