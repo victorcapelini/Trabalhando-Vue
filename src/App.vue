@@ -10,6 +10,7 @@
 </template>
 
 <script>
+
 import { routes } from "./routes";
 import Menu from "./components/shared/menu/Menu.vue";
 
